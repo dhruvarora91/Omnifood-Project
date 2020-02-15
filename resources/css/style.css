@@ -1,0 +1,496 @@
+/*
+Orange color : #e67e22
+*/
+
+
+/* ------------------------------------------------------------------------------ */
+/* BASIC SETUP */
+/* ------------------------------------------------------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: white;
+    color: black;
+    font-family: 'Lato', 'Arial' sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+.span-it-1-of-3 {
+    width: 31.5%;
+}
+
+.span-it-2-of-3 {
+    width: 63%;
+}
+
+/* This is to clear the floats */
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* REUSABLE COMPONENTS */
+/* ------------------------------------------------------------------------------ */
+
+.row {
+    width: 1140px;
+    margin: 0 auto 0 auto;
+}
+
+section {
+    padding: 80px 0 80px 0;
+}
+
+.box {
+    padding: 1%;
+}
+
+/* -------- HEADINGS ---------- */
+
+h1 , h2 , h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 240%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 180%;
+    text-align: center;
+    word-spacing: 2px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    width: 100px;
+    background-color: #e67e22;
+    content: " ";
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+/* -------- PARAGRAPHS ---------- */
+
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin: auto 15%;
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+}
+
+/* -------- BUTTONS ---------- */
+
+.btn:link , .btn:visited, input[type=submit] {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s;
+}
+
+.btn-1:link , .btn-1:visited, input[type=submit], input[type=submit] {
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: white;
+    margin-right: 15px;
+}
+
+.btn-2:link , .btn-2:visited {
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+
+.btn:hover , .btn:active, input[type=submit]:hover, input[type=submit]:active {
+    background-color: #ff7700;
+}
+
+.btn-1:hover , .btn-1:active, input[type=submit] {
+    border: 1px solid #e67e22;
+    color: white;
+}
+
+.btn-2:hover , .btn-2:active {
+    border: 1px solid #e67e22;
+    color: #ffffff;
+}
+
+/* -------- LINKS ---------- */
+
+a:link, a:visited {
+    color: #e67e22;
+    text-decoration: none;
+    border-bottom: 1px solid #e67e22;
+    padding-bottom: 1px;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover, a:active {
+        color: black;
+        border-bottom: 1px solid transparent;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* HEADER */
+/* ------------------------------------------------------------------------------ */
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.700), rgba(0, 0, 0, 0.700)), url(images/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.main-nav li {
+    display: inline-block; 
+    margin-left: 40px;
+}
+
+.main-nav li a:link , .main-nav li a:visited {
+    color: white;
+    padding: 8px 0 8px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+}
+
+.main-nav li a:hover , .main-nav li a:active {
+    border-bottom: 2px solid #e67e22;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* MEALS */
+/* ------------------------------------------------------------------------------ */
+
+.section-meals {
+    padding: 0;
+}
+
+.meals-showcase {
+    list-style: none;
+    width: 100%;
+}
+
+.meals-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.meal-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+.meal-photo img {
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    opacity: 0.7;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo img:hover {
+    transform: scale(1.04);
+    opacity: 1;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* MEALS */
+/* ------------------------------------------------------------------------------ */
+
+.section-steps {
+    background-color: rgb(212, 211, 211);
+}
+
+.step-boxes:first-child {
+    margin-top: 10px;
+    text-align: right;
+    padding-right: 3%;
+}
+.step-boxes:last-child {
+    padding-left: 3%;
+    margin-top: 110px;
+}
+
+.app-screen {
+    width: 40%;
+}
+
+.work-steps div {
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    padding: 5px;
+    font-size: 75%;
+    float: left;
+    margin-right: 25px;
+}
+
+.btn-app img {
+    margin-top: 30px;
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* CITIES */
+/* ------------------------------------------------------------------------------ */
+
+.box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.city-features {
+    margin-bottom: 10px;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* TESTIMONIALS */
+/* ------------------------------------------------------------------------------ */
+
+.section-testimonials {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.750), rgba(0, 0, 0, 0.750), rgba(0, 0, 0, 0.750)), url(images/back-customers.jpg);
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    background-attachment: fixed;
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 20px;
+    display: block;
+}
+
+cite img {
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+blockquote:before {
+    content: "\201C";
+    font-size: 200%;
+    display: block;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* SIGN UP / PLANS */
+/* ------------------------------------------------------------------------------ */
+
+.section-plans {
+    background-color: rgb(212, 211, 211);
+}
+
+.plan-box {
+    background-color: white;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px #e67e22;
+}
+
+.plan-box div {
+    padding: 15px;
+    border-bottom: 1px solid rgb(236, 236, 236);
+}
+
+.plan-box div:last-child {
+    text-align: center;
+}
+
+.plan-price {
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #e67e22;
+}
+
+.plan-price span {
+    font-size: 40%;
+    font-weight: 300;
+}
+
+.plan-price-meal {
+    font-size: 80%;
+}
+
+.plan-box ul {
+    list-style: none;
+}
+
+.plan-box ul li {
+    padding: 5px 0;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* FORMS */
+/* ------------------------------------------------------------------------------ */
+
+.contact-form {
+    width: 60%;
+    margin-left: 0 auto;
+}
+
+input[type=text], input[type=email], select, textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #e67e22;
+}
+
+textarea {
+    height: 100px;
+}
+
+/* This is to remove the blue border that comes when we select an input box */
+*:focus {
+    outline: none;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* FOOTER */
+/* ------------------------------------------------------------------------------ */
+
+footer {
+    background-color: rgb(54, 54, 54);
+    padding: 20px;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social {
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li, .social li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-nav li:last-child, .social li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link, 
+.footer-nav li a:visited {
+    text-decoration: none;
+    color: rgb(185, 184, 184);
+    border: 1px solid transparent;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+.footer-nav li a:hover, 
+.footer-nav li a:active {
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.social li a:link, 
+.social li a:visited {
+    font-size: 20px;
+    border: 0;
+    transition: color 0.2s;
+}
+
+.FB:hover {
+    color: blue;
+}
+
+.TW:hover {
+    color: lightblue;
+}
+
+.GP:hover {
+    color: red;
+}
+
+.IS:hover {
+    color: brown;
+}
+
+
+footer p {
+    color: rgb(185, 184, 184);
+    text-align: center;
+    font-size: 85%;
+    margin-top: 10px;
+}
